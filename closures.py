@@ -10,23 +10,30 @@
 # You can get the number of rows by:
 # len(A)
 
+# We need to make a *deepcopy* of the matrix to avoid modifying the original
+# so leave those copy.deepcopy() calls alone
+import copy
+
 A = [[1, 0, 1, 0], 
      [0, 0, 1, 1],
      [0, 1, 1, 0], 
      [1, 0, 0, 0]]
 
 def warshall(M):
-    R = M
+    R = copy.deepcopy(M)
+    
     # TODO Implement this
     return R
 
 def reflexive_closure(M):
-    R = M
+    R = copy.deepcopy(M)
+
     # TODO Implement this
     return R
 
 def symmetric_closure(M):
-    R = M
+    R = copy.deepcopy(M)
+
     # TODO Implement this
     return R
 
